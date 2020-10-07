@@ -48,10 +48,23 @@ function App() {
     }
     setMeal({ ...meal, extras: newExtras });
   };
+  const clearMeal = () => {
+    setMeal({
+      size: "",
+      carbs: "",
+      protein: "",
+      sauce: "",
+      extras: [],
+    });
+  };
 
   return (
     <>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        clearMeal={clearMeal}
+      />
       <AnimatePresence
         exitBeforeEnter
         onExitComplete={() => setShowModal(false)}
@@ -76,6 +89,7 @@ function App() {
             <Extra addExtra={addExtra} meal={meal} />
           </Route>
           <Route path="/confirm">
+            {" "}
             <Confirm meal={meal} setShowModal={setShowModal} />
           </Route>
           <Route path="/">

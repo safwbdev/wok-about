@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MODAL_MESSAGE, MODAL_Yes } from "../../constants/lang";
 import { backdropVariants, modal } from "./variants";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, clearMeal }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
@@ -18,7 +18,14 @@ const Modal = ({ showModal, setShowModal }) => {
           <motion.div className="modal" variants={modal}>
             <p>{MODAL_MESSAGE}</p>
             <Link to="/">
-              <button onClick={() => setShowModal(false)}>{MODAL_Yes}</button>
+              <button
+                onClick={() => {
+                  setShowModal(false);
+                  clearMeal();
+                }}
+              >
+                {MODAL_Yes}
+              </button>
             </Link>
           </motion.div>
         </motion.div>
