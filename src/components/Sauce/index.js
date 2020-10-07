@@ -18,16 +18,17 @@ const Sauce = ({ selectSauce, meal }) => {
       <h3>{STEP_FIVE}</h3>
       <ul>
         {sauce &&
-          sauce.map((sauce) => {
-            let spanClass = meal.sauce === sauce ? "active" : "";
+          sauce.map((sauce, index) => {
+            let spanClass = meal.sauce === sauce.label ? "active" : "";
             return (
               <motion.li
-                key={sauce}
-                onClick={() => selectSauce(sauce)}
+                key={index}
+                onClick={() => selectSauce(sauce.label)}
                 whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className={spanClass}>{sauce}</span>
+                <img src={sauce.img} alt="" />
+                <span className={spanClass}>{sauce.label}</span>
               </motion.li>
             );
           })}

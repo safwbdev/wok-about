@@ -18,16 +18,17 @@ const Protein = ({ selectProtein, meal }) => {
       <h3>{STEP_THREE}</h3>
       <ul>
         {protein &&
-          protein.map((protein) => {
-            let spanClass = meal.protein === protein ? "active" : "";
+          protein.map((protein, index) => {
+            let spanClass = meal.protein === protein.label ? "active" : "";
             return (
               <motion.li
-                key={protein}
-                onClick={() => selectProtein(protein)}
+                key={index}
+                onClick={() => selectProtein(protein.label)}
                 whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className={spanClass}>{protein}</span>
+                <img src={protein.img} />
+                <span className={spanClass}>{protein.label}</span>
               </motion.li>
             );
           })}

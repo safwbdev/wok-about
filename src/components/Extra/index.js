@@ -15,16 +15,17 @@ const Extra = ({ addExtra, meal }) => {
     >
       <h3>{STEP_SIX}</h3>
       <ul>
-        {extras.map((extra) => {
-          let spanClass = meal.extras.includes(extra) ? "active" : "";
+        {extras.map((extra, index) => {
+          let spanClass = meal.extras.includes(extra.label) ? "active" : "";
           return (
             <motion.li
-              key={extra}
-              onClick={() => addExtra(extra)}
+              key={index}
+              onClick={() => addExtra(extra.label)}
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <span className={spanClass}>{extra}</span>
+              <img src={extra.img} alt="" />
+              <span className={spanClass}>{extra.label}</span>
             </motion.li>
           );
         })}

@@ -18,16 +18,17 @@ const Size = ({ selectSize, meal }) => {
       <h3>{STEP_ONE}</h3>
       <ul>
         {sizes &&
-          sizes.map((size) => {
-            let spanClass = meal.size === size ? "active" : "";
+          sizes.map((size, index) => {
+            let spanClass = meal.size === size.label ? "active" : "";
             return (
               <motion.li
-                key={size}
-                onClick={() => selectSize(size)}
+                key={index}
+                onClick={() => selectSize(size.label)}
                 whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className={spanClass}>{size}</span>
+                <img src={size.img} alt="" />
+                <span className={spanClass}>{size.label}</span>
               </motion.li>
             );
           })}

@@ -18,16 +18,17 @@ const Carbs = ({ selectCarbs, meal }) => {
       <h3>{STEP_TWO}</h3>
       <ul>
         {carbs &&
-          carbs.map((carbs) => {
-            let spanClass = meal.carbs === carbs ? "active" : "";
+          carbs.map((carbs, index) => {
+            let spanClass = meal.carbs === carbs.label ? "active" : "";
             return (
               <motion.li
-                key={carbs}
-                onClick={() => selectCarbs(carbs)}
+                key={index}
+                onClick={() => selectCarbs(carbs.label)}
                 whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className={spanClass}>{carbs}</span>
+                <img src={carbs.img} alt="" />
+                <span className={spanClass}>{carbs.label}</span>
               </motion.li>
             );
           })}

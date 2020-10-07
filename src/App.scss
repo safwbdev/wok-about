@@ -21,6 +21,13 @@
 
 /* lists */
 li {
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 50em;
+    width: 4em;
+    margin-right: 1em;
+  }
   span {
     &.active {
       font-weight: bold;
