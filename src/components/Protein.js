@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { STEP_NEXT, STEP_THREE } from "../constants/lang";
 
 const containerVariants = {
   hidden: {
@@ -53,7 +54,7 @@ const Protein = ({ selectProtein, meal }) => {
       exit="exit"
       //   transition={{ type: "spring", delay: 0.5 }}
     >
-      <h3>Step 3: Select Protein</h3>
+      <h3>{STEP_THREE}</h3>
       <ul>
         {protein &&
           protein.map((protein) => {
@@ -73,9 +74,9 @@ const Protein = ({ selectProtein, meal }) => {
 
       {meal.protein && (
         <motion.div className="next" variants={nextVariants}>
-          <Link to="/sauce">
+          <Link to="/veggies">
             <motion.button variants={buttonVariants} whileHover="hover">
-              Next
+              {STEP_NEXT}
             </motion.button>
           </Link>
         </motion.div>

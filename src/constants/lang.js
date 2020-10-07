@@ -1,0 +1,16 @@
+export const HOME_WELCOME = "Welcome to Wok-About";
+export const HOME_ORDER = "Place An Order";
+export const STEP_ONE = "Step 1: Select Size";
+export const STEP_TWO = "Step 2: Select Carbs";
+export const STEP_THREE = "Step 3: Select Protein";
+export const STEP_FOUR = "Step 4: Select Veggies";
+export const STEP_FIVE = "Step 5: Select Sauce";
+export const STEP_SIX = "Step 6: Choose Extras";
+export const STEP_NEXT = "Next";
+export const STEP_ORDER = "Order";
+export const ORDER_THANK = "Thank you for ordering";
+export const ORDER_MESSAGE_1 = "You ordered a ";
+export const ORDER_MESSAGE_2 = " meal with:";
+export const ORDER_EXTRA = "Extras:";
+export const MODAL_MESSAGE = "Want to make another another order?";
+export const MODAL_Yes = "Yes";

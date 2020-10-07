@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Size from "./components/Size";
 import Carbs from "./components/Carbs";
 import Protein from "./components/Protein";
+import Veggies from "./components/Veggies";
 import Extra from "./components/Extra";
 import Confirm from "./components/Confirm";
 import Sauce from "./components/Sauce";
@@ -30,6 +31,9 @@ function App() {
   };
   const selectProtein = (protein) => {
     setMeal({ ...meal, protein });
+  };
+  const selectVeggies = (veggies) => {
+    setMeal({ ...meal, veggies });
   };
   const selectSauce = (sauce) => {
     setMeal({ ...meal, sauce });
@@ -61,6 +65,9 @@ function App() {
           </Route>
           <Route path="/protein">
             <Protein selectProtein={selectProtein} meal={meal} />
+          </Route>
+          <Route path="/veggies">
+            <Veggies selectVeggies={selectVeggies} meal={meal} />
           </Route>
           <Route path="/sauce">
             <Sauce selectSauce={selectSauce} meal={meal} />

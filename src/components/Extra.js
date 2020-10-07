@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { STEP_ORDER, STEP_SIX } from "../constants/lang";
 
 const containerVariants = {
   hidden: {
@@ -43,7 +44,7 @@ const Extra = ({ addExtra, meal }) => {
       animate="visible"
       exit="exit"
     >
-      <h3>Step 2: Choose Extras</h3>
+      <h3>{STEP_SIX}</h3>
       <ul>
         {extras.map((extra) => {
           let spanClass = meal.extras.includes(extra) ? "active" : "";
@@ -62,7 +63,7 @@ const Extra = ({ addExtra, meal }) => {
 
       <Link to="/confirm">
         <motion.button variants={buttonVariants} whileHover="hover">
-          Order
+          {STEP_ORDER}
         </motion.button>
       </Link>
     </motion.div>

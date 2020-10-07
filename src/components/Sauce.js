@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { STEP_NEXT, STEP_FIVE } from "../constants/lang";
 
 const containerVariants = {
   hidden: {
@@ -59,7 +60,7 @@ const Sauce = ({ selectSauce, meal }) => {
       exit="exit"
       //   transition={{ type: "spring", delay: 0.5 }}
     >
-      <h3>Step 3: Select Sauce</h3>
+      <h3>{STEP_FIVE}</h3>
       <ul>
         {sauce &&
           sauce.map((sauce) => {
@@ -81,7 +82,7 @@ const Sauce = ({ selectSauce, meal }) => {
         <motion.div className="next" variants={nextVariants}>
           <Link to="/extra">
             <motion.button variants={buttonVariants} whileHover="hover">
-              Next
+              {STEP_NEXT}
             </motion.button>
           </Link>
         </motion.div>

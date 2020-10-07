@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import { HOME_WELCOME, HOME_ORDER } from "../constants/lang";
 const buttonVariants = {
   hover: {
     scale: 1.1,
@@ -37,10 +37,10 @@ const Home = () => {
       animate="visible"
       exit="exit"
     >
-      <h2>Welcome to Wok-About</h2>
+      <h2>{HOME_WELCOME}</h2>
       <Link to="/size">
         <motion.button variants={buttonVariants} whileHover="hover">
-          Place An Order
+          {HOME_ORDER}
         </motion.button>
       </Link>
     </motion.div>
