@@ -9,7 +9,7 @@ import Confirm from "./components/Confirm";
 import Sauce from "./components/Sauce";
 import { AnimatePresence } from "framer-motion";
 import Modal from "./components/Modal";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const location = useLocation();
