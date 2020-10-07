@@ -27,7 +27,7 @@ const Protein = ({ selectProtein, meal }) => {
                 whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <img src={protein.img} />
+                <img src={protein.img} alt="" />
                 <span className={spanClass}>{protein.label}</span>
               </motion.li>
             );
