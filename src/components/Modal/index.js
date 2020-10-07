@@ -1,26 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { MODAL_MESSAGE, MODAL_Yes } from "../constants/lang";
-
-const backdropVariants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 },
-};
-
-const modal = {
-  hidden: {
-    y: "-110vh",
-    opacity: 0,
-  },
-  visible: {
-    y: "200px",
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-    },
-  },
-};
+import { MODAL_MESSAGE, MODAL_Yes } from "../../constants/lang";
+import { backdropVariants, modal } from "./variants";
 
 const Modal = ({ showModal, setShowModal }) => {
   return (

@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
-import Home from "./components/Home";
-import Size from "./components/Size";
-import Carbs from "./components/Carbs";
-import Protein from "./components/Protein";
-import Veggies from "./components/Veggies";
-import Extra from "./components/Extra";
-import Confirm from "./components/Confirm";
-import Sauce from "./components/Sauce";
 import { AnimatePresence } from "framer-motion";
-import Modal from "./components/Modal";
 import "./App.scss";
+import Home from "./components/Home/";
+import Size from "./components/Size/";
+import Carbs from "./components/Carbs/";
+import Protein from "./components/Protein/";
+import Veggies from "./components/Veggies/";
+import Extra from "./components/Extra/";
+import Confirm from "./components/Confirm/";
+import Sauce from "./components/Sauce/";
+import Modal from "./components/Modal/";
 
 function App() {
   const location = useLocation();

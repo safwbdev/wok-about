@@ -5,37 +5,8 @@ import {
   ORDER_MESSAGE_1,
   ORDER_MESSAGE_2,
   ORDER_THANK,
-} from "../constants/lang";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-    x: "100vw",
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      mass: 0.4,
-      damping: 8,
-      when: "beforeChildren",
-      staggerChildren: 0.4,
-    },
-  },
-  exit: {
-    x: "-100vw",
-    transition: { ease: "easeInOut" },
-  },
-};
-const childVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
+} from "../../constants/lang";
+import { containerVariants, childVariants } from "./variants";
 
 const Confirm = ({ meal, setShowModal }) => {
   useEffect(() => {
