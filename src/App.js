@@ -11,6 +11,7 @@ import Extra from "./components/Extra/";
 import Confirm from "./components/Confirm/";
 import Sauce from "./components/Sauce/";
 import Modal from "./components/Modal/";
+import Header from "./components/Header";
 
 function App() {
   const location = useLocation();
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Modal
         showModal={showModal}
         setShowModal={setShowModal}

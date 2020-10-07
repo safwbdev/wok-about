@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { HOME_WELCOME, HOME_ORDER } from "../../constants/lang";
+import { HOME_WELCOME, HOME_ORDER, HOME_INTRO } from "../../constants/lang";
 import { buttonVariants, containerVariants } from "./variants";
+// import Wok_icon from "../../constants/wok_icon";
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
       animate="visible"
       exit="exit"
     >
+      {/* <Wok_icon /> */}
       <h2>{HOME_WELCOME}</h2>
+      <h4>{HOME_INTRO}</h4>
       <Link to="/size">
         <motion.button variants={buttonVariants} whileHover="hover">
           {HOME_ORDER}

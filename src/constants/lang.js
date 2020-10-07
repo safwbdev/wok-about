@@ -1,5 +1,7 @@
+export const HEADER_TEXT = "Wok-About";
 export const HOME_WELCOME = "Welcome to Wok-About";
-export const HOME_ORDER = "Place An Order";
+export const HOME_INTRO = `"Here, YOU decide your diet! Not us!"`;
+export const HOME_ORDER = "Build your meal";
 export const STEP_ONE = "Step 1: Select Size";
 export const STEP_TWO = "Step 2: Select Carbs";
 export const STEP_THREE = "Step 3: Select Protein";
