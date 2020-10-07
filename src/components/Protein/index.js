@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { STEP_NEXT, STEP_THREE } from "../../constants/lang";
 import { containerVariants, nextVariants, buttonVariants } from "./variants";
+import { protein } from "./protein";
 
 const Protein = ({ selectProtein, meal }) => {
-  const protein = ["Beef", "Chicken", "Fish", "Prawn", "Tofu"];
-
   return (
     <motion.div
       className="base container"

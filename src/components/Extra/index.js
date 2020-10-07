@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { STEP_ORDER, STEP_SIX } from "../../constants/lang";
 import { containerVariants, buttonVariants } from "./variants";
-
+import { extras } from "./extras";
 const Extra = ({ addExtra, meal }) => {
-  let extras = ["Vegetables", "Tofu", "Mushrooms", "Protein", "Extra Sauce"];
-
   return (
     <motion.div
       className="toppings container"

@@ -3,16 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { STEP_NEXT, STEP_FIVE } from "../../constants/lang";
 import { containerVariants, nextVariants, buttonVariants } from "./variants";
+import { sauce } from "./sauce";
 
 const Sauce = ({ selectSauce, meal }) => {
-  const sauce = [
-    "Soy Sauce",
-    "Oyster Sauce",
-    "Black Pepper Sauce",
-    "Teriyaki Sauce",
-    "Plain",
-  ];
-
   return (
     <motion.div
       className="base container"

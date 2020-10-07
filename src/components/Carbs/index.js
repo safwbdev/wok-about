@@ -3,16 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { STEP_TWO, STEP_NEXT } from "../../constants/lang";
 import { containerVariants, nextVariants, buttonVariants } from "./variants";
+import { carbs } from "./carbs";
 
 const Carbs = ({ selectCarbs, meal }) => {
-  const carbs = [
-    "White Rice",
-    "Brown Rice",
-    "Pasta",
-    "Ramen",
-    "Cauliflower Rice (Non-carb)",
-  ];
-
   return (
     <motion.div
       className="base container"

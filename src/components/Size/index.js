@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { STEP_ONE, STEP_NEXT } from "../../constants/lang";
 import { containerVariants, nextVariants, buttonVariants } from "./variants";
+import { sizes } from "./sizes";
 
 const Size = ({ selectSize, meal }) => {
-  const sizes = ["Small", "Medium", "Large"];
-
   return (
     <motion.div
       className="base container"
